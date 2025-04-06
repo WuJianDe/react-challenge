@@ -1,0 +1,114 @@
+/* reset.scss */
+
+/* 1. 全域重置：讓所有元素的 box-sizing 設定一致 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. 重置列表樣式 */
+ol, ul {
+  list-style: none;
+}
+
+/* 3. 重置超連結的樣式 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 4. 重置表格邊框、間距等 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 5. 清除所有圖片的邊框（通常用於 <a> 包裹的 <img>） */
+img {
+  border: 0;
+  max-width: 100%;
+  display: block;
+}
+
+/* 6. 移除預設的表單樣式 */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* 7. 重置內聯元素的行高 */
+button,
+input,
+select,
+textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* 8. 重置文字的縮排 */
+p, blockquote, ul, ol, dl, dd, figure, pre {
+  margin-bottom: 1em;
+}
+
+/* 9. 重置 `h1` 至 `h6` 的標題樣式 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+/* 10. 清除所有段落的預設縮排 */
+p {
+  text-indent: 0;
+}
+
+/* 11. 讓所有元素的 line-height 一致 */
+html, body {
+  line-height: 1.5;
+}
+
+/* 12. 重置表單元素的邊框、背景與行為 */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* 13. 清除視差樣式 */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 1em 0;
+}
+
+/* 14. 使 `body` 元素滿足全屏 */
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* 15. 用統一的樣式處理表格、標題等 */
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
+  display: block;
+}
