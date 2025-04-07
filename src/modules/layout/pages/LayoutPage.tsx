@@ -53,7 +53,7 @@ const LayoutPage: React.FC = () => {
         </aside>
 
         {/* 子路由內容 */}
-        <main style={{ flex: 1, padding: "20px" }}>
+        <main style={{ flex: 1, padding: "0 0 0 20px " }}>
           <Outlet />
         </main>
       </div>
