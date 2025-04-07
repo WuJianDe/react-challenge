@@ -1,18 +1,21 @@
 import { RouteObject } from "react-router-dom";
 import LayoutPage from "../modules/layout/pages/LayoutPage";
-import OneDayPage from "../modules/1day/pages/OneDayPage";
-import TwoDayPage from "../modules/2day/pages/TwoDayPage";
-import ThreeDayPage from "../modules/3day/pages/ThreeDayPage";
+import CounterePage from "../modules/day-one/pages/CounterPage";
+import TwoWayBindingPage from "../modules/day-one/pages/TwoWayBindingPage";
+import MessageBoardPage from "../modules/day-one/pages/MessageBoardPage";
+import RequestPage from "../modules/day-one/pages/RequestPage";
+import TodoListPage from "../modules/day-one/pages/TodoListPage";
 
 const routes: RouteObject[] = [
   {
     path: "/",
     element: <LayoutPage />,
     children: [
-      { index: true, element: <OneDayPage /> },
-      { path: "one-day", element: <OneDayPage /> },
-      { path: "two-day", element: <TwoDayPage /> },
-      { path: "three-day", element: <ThreeDayPage /> },
+      { path: "counter", element: <CounterePage /> },
+      { path: "two-way-binding", element: <TwoWayBindingPage /> },
+      { path: "todo-lsit", element: <TodoListPage /> },
+      { path: "api-request", element: <RequestPage /> },
+      { path: "message-board", element: <MessageBoardPage /> },
     ],
   },
 ];

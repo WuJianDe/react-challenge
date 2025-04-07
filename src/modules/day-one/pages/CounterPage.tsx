@@ -1,30 +1,36 @@
 import { useState } from "react";
 import { Button, Card } from "antd";
 import Message from "./Message";
+import styles from "../styles/counter.module.scss";
 const Counter = () => {
   const [count, setCount] = useState(0);
-  const handleAdd = () => {
-    setCount(count + 1);
+  const incrementCount = () => {
+    setCount((prev) => prev + 1);
   };
-  const handleReset = () => {
+  const resetCount = () => {
     setCount(0);
   };
   return (
     <Card
-      title="Counter"
-      style={{ width: 300, textAlign: "center", height: 200 }}
+      title="Counter "
+      className={styles["card"]}
     >
       <h1>
         <Message type="count" count={count} />
       </h1>
-      <Button type="primary" onClick={handleAdd} style={{ marginTop: 16 }}>
+      <Button
+        type="primary"
+        className={styles["button"]}
+        onClick={incrementCount}
+      >
         Add
       </Button>
       <Button
         type="primary"
+        className={styles["button"]}
+        disabled={count === 0}
         danger
-        onClick={handleReset}
-        style={{ margin: "16px 0 0 10px" }}
+        onClick={resetCount}
       >
         Reset
       </Button>
