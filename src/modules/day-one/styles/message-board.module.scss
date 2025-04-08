@@ -1,0 +1,27 @@
+.card {
+  margin-left: 10px;
+  width: 300px;
+  text-align: center;
+}
+.list {
+  border: #c3c3c3 solid 1px;
+  height: 200px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  word-break: break-all;
+}
+.list-item-time {
+  width: 70px;
+  min-width: 70px;
+  color: #545454;
+  font-size: 12px;
+}
+.input {
+  border: #c3c3c3 solid 1px;
+  padding: 4px;
+}

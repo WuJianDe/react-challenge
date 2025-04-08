@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Button, Card, Input, Space } from "antd";
-import styles from "../styles/day-one.module.scss";
+import { Card } from "antd";
+import styles from "../styles/request.module.scss";
 import axios from "axios";
 
 interface ListItem {
@@ -16,10 +16,9 @@ const Request = () => {
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((res) => {
         setList(res.data.slice(0, 5));
-        console.log(res.data);
         setTimeout(() => {
           setLoading(false);
-        }, 2000);
+        }, 1000);
       })
       .catch((err) => {
         console.log(err);
@@ -27,19 +26,12 @@ const Request = () => {
   }, []);
 
   return (
-    <Card
-      title="API Request"
-      style={{ marginLeft: 10, width: 300, textAlign: "center" }}
-    >
+    <Card title="API Request" className={styles["card"]}>
       {loading ? (
         "loading..."
       ) : (
         <div
-          style={{
-            border: "1px solid #ccc",
-            marginBottom: 10,
-            borderRadius: 4
-          }}
+          className={styles["list"]}
         >
           {list.length != 0
             ? list.map((item, index) => {
@@ -49,7 +41,7 @@ const Request = () => {
                   </h3>
                 );
               })
-            : "尚無資訊"}
+            : "No message yet"}
         </div>
       )}
     </Card>
