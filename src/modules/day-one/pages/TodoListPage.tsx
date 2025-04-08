@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Card, Input, Space, message } from "antd";
-import styles from "../styles/message-board.module.scss";
+import styles from "../styles/todo-list.module.scss";
 
 interface ListItem {
   id: string;
@@ -48,7 +48,7 @@ const TodoList = () => {
   };
 
   return (
-    <Card title="To Do List">
+    <Card title="Todo List">
       {contextHolder}
       <div className={styles["list"]}>
         {list.length

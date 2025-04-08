@@ -2,12 +2,15 @@ import { Outlet, Link } from "react-router-dom";
 import styles from "../styles/layout.module.scss";
 
 const LayoutPage: React.FC = () => {
-  const links = [
+  const BasicExerciseslinks = [
     { to: "/counter", label: "Counter" },
     { to: "/two-way-binding", label: "Two Way Binding" },
-    { to: "/todo-lsit", label: "To Do List" },
+    { to: "/todo-list", label: "Todo List" },
     { to: "/api-request", label: "API Request" },
     { to: "/message-board", label: "Message Board" }
+  ];
+  const Productlinks = [
+    { to: "/todo-list-plus", label: "Todo List Plus" },
   ];
 
   return (
@@ -20,7 +23,15 @@ const LayoutPage: React.FC = () => {
         <aside className={styles["sidebar"]}>
           <h3 className={styles["sidebar-title"]}>Basic exercises</h3>
           <nav className={styles["nav"]}>
-            {links.map((link, index) => (
+            {BasicExerciseslinks.map((link, index) => (
+              <Link key={index} to={link.to} className={styles["nav-link"]}>
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <h3 className={styles["sidebar-title"]}>Product</h3>
+          <nav className={styles["nav"]}>
+            {Productlinks.map((link, index) => (
               <Link key={index} to={link.to} className={styles["nav-link"]}>
                 {link.label}
               </Link>

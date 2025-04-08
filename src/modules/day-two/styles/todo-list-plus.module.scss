@@ -1,0 +1,93 @@
+.card {
+  margin-left: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.list {
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+  word-break: break-word;
+  border-bottom: 1px solid #eee;
+
+  &:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:active {
+    transform: none;
+    box-shadow: none;
+  }
+
+  &.dragging {
+    background-color: #f0f0f0;
+    opacity: 0.9;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .list-item-close {
+    color: #0b0b0b;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+    &:hover {
+      color: darkred;
+      transform: rotate(20deg);
+    }
+  }
+}
+
+.list-item.drag-over {
+  border: 2px dashed #1890ff;
+  background-color: #e6f7ff;
+  transform: none;
+  box-shadow: none;
+}
+
+.selected {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .list-item {
+  border-color: #444;
+}
+
+.dark-mode .list-item-close {
+  color: #ff4d4f;
+}
+
+.dnd-drag-preview {
+  transform: none !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
