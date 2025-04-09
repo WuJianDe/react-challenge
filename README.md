@@ -1,8 +1,6 @@
 成品：https://wujiande.github.io/react-challenge/#/counter
 
-![預覽圖1](docs/images/demo1.PNG)
-![預覽圖2](docs/images/demo2.PNG)
-![預覽圖3](docs/images/demo3.PNG)
+![預覽圖3](docs/images/demo9.PNG)
 
 ​在學習 React 的過程中，我透過邊學邊做的小型專案來實踐所學知識，這不僅加深了我對 React 的理解，也讓我在實作中累積了寶貴的經驗。
 
