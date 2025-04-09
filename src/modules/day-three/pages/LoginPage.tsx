@@ -14,7 +14,7 @@ const LoginPage: React.FC = () => {
   }) => {
     setLoading(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500)); // 模擬 API 請求
+      await new Promise((resolve) => setTimeout(resolve, 500)); // Simulate API request
       messageApi.success("Login successful!");
       setUsername(values.username);
     } catch (error) {
@@ -26,26 +26,26 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <Card title="登入" className={styles["card"]}>
+    <Card title="Login" className={styles["card"]}>
       {contextHolder}
       <Form onFinish={handleLogin} layout="vertical">
         <Form.Item
-          label="使用者名稱"
+          label="Username"
           name="username"
-          rules={[{ required: true, message: "請輸入使用者名稱" }]}
+          rules={[{ required: true, message: "Please enter your username" }]}
         >
-          <Input placeholder="請輸入使用者名稱" />
+          <Input placeholder="Please enter your username" />
         </Form.Item>
         <Form.Item
-          label="密碼"
+          label="Password"
           name="password"
-          rules={[{ required: true, message: "請輸入密碼" }]}
+          rules={[{ required: true, message: "Please enter your password" }]}
         >
-          <Input.Password placeholder="請輸入密碼" />
+          <Input.Password placeholder="Please enter your password" />
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit" loading={loading} block>
-            登入
+            Login
           </Button>
         </Form.Item>
       </Form>
