@@ -18,7 +18,7 @@ const Request = () => {
         setList(res.data.slice(0, 5));
         setTimeout(() => {
           setLoading(false);
-        }, 1000);
+        }, 500);
       })
       .catch((err) => {
         console.log(err);
